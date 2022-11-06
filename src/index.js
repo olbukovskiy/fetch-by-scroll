@@ -22,7 +22,7 @@ let lightbox = new SimpleLightbox('.gallery a', {
 function scrollHandler() {
   const { scrollHeight, clientHeight, scrollTop } = document.documentElement;
 
-  if (clientHeight + scrollTop === scrollHeight) {
+  if (clientHeight + scrollTop > scrollHeight - 5) {
     showLoading();
   }
 }

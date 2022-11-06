@@ -175,5 +175,5 @@ async function loadMore() {
 function showLoading() {
   refs.loadingBalls.classList.add('show');
 
-  setTimeout(loadMore, 500);
+  setTimeout(loadMore, 300);
 }

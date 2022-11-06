@@ -1,0 +1,172 @@
+.container-all {
+  padding: 0 15px;
+  width: 100vw;
+  margin-left: auto;
+  margin-right: auto;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+ul,
+ol {
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.search-form {
+  position: fixed;
+  top: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 30px;
+
+  width: 100vw;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background-color: #0d6efd;
+}
+
+.search-field {
+  padding: 0 15px 0 15px;
+  font-size: 16px;
+  width: 100%;
+  height: 36px;
+  max-width: 300px;
+  border-radius: 6px;
+  border-color: #86b7fe;
+}
+
+.info-item {
+  font-size: 14px;
+  color: #000;
+}
+
+.info-item:not(:last-child) {
+  margin-right: 20px;
+}
+
+.info {
+  display: flex;
+  padding: 10px 12px;
+  border-bottom: 1px solid #eee;
+  border-left: 1px solid #eee;
+  border-right: 1px solid #eee;
+}
+
+.gallery {
+  margin-top: 130px;
+
+  display: grid;
+  grid-template-columns: repeat(5, 330px);
+  grid-auto-rows: 283px;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 100px;
+}
+
+.btn-primary {
+  margin-bottom: 30px;
+}
+
+.submit-btn {
+  height: 36px;
+  padding: 0px 12px;
+  color: #000;
+  background-color: #f5f4fa;
+  border-radius: 6px;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15),
+    0 1px 1px rgba(0, 0, 0, 0.075);
+  border-color: transparent;
+  transition: background-color 250ms ease-in-out, color 250ms ease-in-out;
+}
+
+.submit-btn:hover {
+  border-color: #000;
+  color: #fff;
+  background-color: #0d6efd;
+}
+
+.btn-primary {
+  height: 36px;
+}
+
+.btn.btn-primary.is-hidden {
+  display: none;
+}
+
+.spinner-border-sm.spinner-border.is-hidden {
+  display: none;
+}
+
+.wrapper {
+  display: block;
+  height: 220px;
+  width: 100%;
+}
+
+.loading {
+  opacity: 0;
+  display: flex;
+  position: fixed;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: opacity .3s ease-in;
+}
+
+.loading.show {
+  opacity: 1;
+}
+
+.ball {
+  background-color: #777;
+  border-radius: 50%;
+  margin: 5px;
+  height: 10px;
+  width: 10px;
+  animation: jump .5s ease-in infinite;
+}
+
+.ball:nth-of-type(2) {
+  animation-delay: 0.1s;
+}
+
+.ball:nth-of-type(3) {
+  animation-delay: 0.2s;
+}
+
+@keyframes jump {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
